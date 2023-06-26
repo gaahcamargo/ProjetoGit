@@ -1,0 +1,329 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista_de_Exercícios1_20
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Digite o número do Exercício que deseja verificar: ");
+            int num = int.Parse(Console.ReadLine());
+            switch (num)
+            {
+                case 1:
+                    Console.WriteLine("***Atividade 1***");
+                    Console.WriteLine("Digite o tamanho da base do triângulo em centímetros");
+                    double b = double.Parse(Console.ReadLine());
+                    Console.WriteLine("Digite a altura do triângulo em centímetros");
+                    double h = double.Parse(Console.ReadLine());
+                    double resultado = (b * h) / 2;
+                    Console.WriteLine("A área do triângulo é de " + (resultado / 100) + " m2");
+                    Console.ReadKey();
+                    break;
+                case 2:
+                    Console.WriteLine("***Atividade 2***");
+                    Console.WriteLine("Digite o primeiro número");
+                    double n1 = double.Parse(Console.ReadLine());
+                    Console.WriteLine("Digite o segundo número");
+                    double n2 = double.Parse(Console.ReadLine());
+                    Console.WriteLine("Abaixo irei te mostrar as expressões e os respectivos resultados");
+                    Console.WriteLine("Se eu somar, obteremos: " + (n1 + n2));
+                    Console.WriteLine("Se eu subtrair, obteremos: " + (n1 - n2));
+                    Console.WriteLine("Se eu multiplicar, obteremos: " + (n1 * n2));
+                    Console.WriteLine("Se eu dividir, obteremos: " + (n1 / n2));
+                    Console.ReadKey();
+                    break;
+                case 3:
+                    Console.WriteLine("***Atividade 3***");
+                    Console.Write("Nome do Vendedor: ");
+                    string nome = Console.ReadLine();
+                    Console.Write("Salário Fixo em reais: ");
+                    double salario = double.Parse(Console.ReadLine());
+                    Console.Write("Total de Vendas em reais: ");
+                    double vendas = double.Parse(Console.ReadLine());
+                    double comissao = vendas * 0.2;
+                    double total = comissao + salario;
+                    Console.WriteLine("Nome do Funcionário: " + nome);
+                    Console.WriteLine("Tem um salário fixo de: R$" + salario);
+                    Console.WriteLine("Receberá um total de R$" + total + " referente a salário + comissão sobre as vendas");
+                    Console.ReadKey();
+                    break;
+                case 4:
+                    Console.WriteLine("***Atividade 4***");
+                    Console.Write("Digite o nome do Aluno: ");
+                    string nome4 = Console.ReadLine();
+                    Console.Write("Digite a nota da Prova 1: ");
+                    double p1 = double.Parse(Console.ReadLine());
+                    Console.Write("Digite a nota da Prova 2: ");
+                    double p2 = double.Parse(Console.ReadLine());
+                    Console.Write("Digite a nota da Prova 3: ");
+                    double p3 = double.Parse(Console.ReadLine());
+                    double p1final = p1 * 0.2;
+                    double p2final = p2 * 0.4;
+                    double p3final = p3 * 0.6;
+                    double notafinal = p1final + p2final + p3final;
+                    Console.WriteLine("O aluno " + nome4 + " teve uma média final de " + notafinal);
+                    Console.ReadKey();
+                    break; 
+                case 5:
+                    Console.WriteLine("***Atividade 5***");
+                    Console.WriteLine("Digite valor 1");
+                    int a5 = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Digite valor 2");
+                    int b5 = int.Parse(Console.ReadLine());
+                    if (a5 == b5)
+                    {
+                        Console.WriteLine("Os número são iguais");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Os número são diferentes");
+                        if (a5 > b5)
+                        {
+                            Console.WriteLine("O maior número é: " + a5);
+                        }
+                        else
+                        {
+                            Console.WriteLine("O maior número é: " + b5);
+                        }
+                    }
+
+                    Console.ReadKey();
+                    break;
+                case 6:
+                    Console.WriteLine("***Atividade 6***");
+                    Console.WriteLine("Digite um número");
+                    int a6 = int.Parse(Console.ReadLine());
+                    if (a6 >= 200 && a6 <= 300)
+                    {
+                        Console.WriteLine("O número " + a6 + " está entre 200 e 300");
+                    }
+                    else
+                    {
+                        Console.WriteLine("O número " + a6 + " não está entre 200 e 300");
+                    }
+                    Console.ReadKey();
+                    break;
+                case 7:
+                    Console.WriteLine("***Atividade 7***");
+                    Console.WriteLine("Digite a quantidade de cópias");
+                    int a7 = int.Parse(Console.ReadLine());
+                    if (a7 <= 200)
+                    {
+                        Console.WriteLine("O valor devido é de R$" + a7 * 0.5);
+                    }
+                    else
+                    {
+                        Console.WriteLine("O valor devido é de R$" + a7 * 0.3);
+                    }
+                    Console.ReadKey();
+                    break;
+                case 8:
+                    Console.WriteLine("***Atividade 8***");
+                    Console.WriteLine("Digite sua idade");
+                    int idade = int.Parse(Console.ReadLine());
+                    if (idade <= 13)
+                    {
+                        Console.WriteLine("Jogador Categoria Infantil");
+                    }
+                    else if (idade <= 17)
+                    {
+                        Console.WriteLine("Jogador Categoria Juvenil");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Jogador Categoria Sênior");
+                    }
+                    Console.ReadKey();
+                    break;
+                case 9:
+                    Console.WriteLine("***Atividade 9***");
+                    Console.WriteLine("Digite valor 1");
+                    int a9 = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Digite valor 2");
+                    int b9 = int.Parse(Console.ReadLine());
+                    if (a9 > b9)
+                    {
+                        Console.WriteLine("O maior número é: " + a9);
+                    }
+                    else
+                    {
+                        Console.WriteLine("O maior número é: " + b9);
+                    }
+                    Console.ReadKey();
+                    break;
+                case 10:
+                    Console.WriteLine("***Atividade 10***");
+                    Console.WriteLine("Calculadora de Média Aritimética de 3 números");
+                    Console.WriteLine("Digite o primeiro valor");
+                    int v1 = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Digite o segundo valor");
+                    int v2 = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Digite o terceiro valor");
+                    int v3 = int.Parse(Console.ReadLine());
+                    int ma = ((v1 + v2 + v3) / 3);
+                    Console.WriteLine("A média aritimética dos 3 valores acima é: " + ma);
+                    Console.ReadKey();
+                    break;
+                case 11:
+                    Console.WriteLine("***Atividade 11***");
+                    Console.WriteLine("Digite um número");
+                    int a11 = int.Parse(Console.ReadLine());
+                    if (a11 % 2 == 0)
+                    {
+                        Console.WriteLine("O número {0} é par", a11);
+                    }
+                    else
+                    {
+                        Console.WriteLine("O número {0} é impar", a11);
+                    }
+                        Console.ReadKey();
+                    break;
+                case 12:
+                    Console.WriteLine("***Atividade 12***");
+                    Console.Write("Digite seu nome: ");
+                    string nome12 = Console.ReadLine();
+                    Console.Write("Digite nota da P1: ");
+                    int p112 = int.Parse(Console.ReadLine());
+                    Console.Write("Digite nota da P2: ");
+                    int p212 = int.Parse(Console.ReadLine());
+                    Console.Write("Digite nota da P3: ");
+                    int p312 = int.Parse(Console.ReadLine());
+                    Console.Write(nome12 + ", sua nota média é de: " + (p112 + p212 + p312) / 3);
+                    Console.ReadKey();
+                    break;
+                case 13:
+                    Console.WriteLine("***Atividade 13***");
+                    Console.WriteLine("Digite um número");
+                    int a13 = int.Parse(Console.ReadLine());
+                    if (a13 >= 100 && a13 <= 200)
+                    {
+                        Console.WriteLine("O número " + a13 + " está entre 100 e 200");
+                    }
+                    else
+                    {
+                        Console.WriteLine("O número " + a13 + " não está entre 100 e 200");
+                    }
+                    Console.ReadKey();
+                    break;
+                case 14:
+                    Console.WriteLine("***Atividade 14***");
+                    Console.WriteLine("Digite a temperatura em Graus Celsius (°C)");
+                    double tc14 = double.Parse(Console.ReadLine());
+                    double tf14 = (9 * tc14 + 160) / 5;
+                    Console.WriteLine(tc14 + "°C é a mesma coisa que " + tf14 + "°F");
+                    Console.ReadKey();
+                    break;
+                case 15:
+                    Console.WriteLine("***Atividade 15***");
+                    Console.WriteLine("Digite a temperatura em Grau Fahrenheit (°F)");
+                    double tf15 = double.Parse(Console.ReadLine());
+                    double tc15 = ((tf15 - 32) * 5) / 9;
+                    Console.WriteLine(tf15 + "°F é a mesma coisa que " + tc15 + "°C");
+                    Console.ReadKey();
+                    break;
+                case 16:
+                    Console.WriteLine("***Atividade 16***");
+                    Console.WriteLine("Digite o primeiro número: ");
+                    double n116 = double.Parse(Console.ReadLine());
+                    Console.WriteLine("Digite o segundo número: ");
+                    double n216 = double.Parse(Console.ReadLine());
+                    Console.WriteLine("Digite o terceiro número: ");
+                    double n316 = double.Parse(Console.ReadLine());
+
+                    if (n116 > n216 && n216 > n316)
+                    {
+                        Console.WriteLine("Em ordem crescente {0}, {1}, {2}", n316, n216, n116);
+                    }
+                    if (n116 > n316 && n316 > n216)
+                    {
+                        Console.WriteLine("Em ordem crescente {0}, {1}, {2}", n216, n316, n116);
+                    }
+                    if (n216 > n116 && n116 > n316)
+                    {
+                        Console.WriteLine("Em ordem crescente {0}, {1}, {2}", n316, n116, n216);
+                    }
+                    if (n216 > n316 && n316 > n116)
+                    {
+                        Console.WriteLine("Em ordem crescente {0}, {1}, {2}", n116, n316, n216);
+                    }
+                    if (n316 > n116 && n116 > n216)
+                    {
+                        Console.WriteLine("Em ordem crescente {0}, {1}, {2}", n216, n116, n316);
+                    }
+                    if (n316 > n216 && n216 > n116)
+                    {
+                        Console.WriteLine("Em ordem crescente {0}, {1}, {2}", n116, n216, n316);
+                    }
+                    Console.ReadKey();
+                    break;
+                case 17:
+                    Console.WriteLine("***Atividade 17***");
+                    Console.Write("Digite nota n1: ");
+                    double n117 = double.Parse(Console.ReadLine());
+                    Console.Write("Digite nota n2: ");
+                    double n217 = double.Parse(Console.ReadLine());
+                    Console.Write("Digite nota n3: ");
+                    double n317 = double.Parse(Console.ReadLine());
+                    Console.Write("Digite nota n4: ");
+                    double n417 = double.Parse(Console.ReadLine());
+                    double media17 = (n117 + n217 + n317 + n417) / 4;
+                    if (media17 >= 5)
+                    {
+                        Console.WriteLine("Você foi APROVADO! Sua média é de " + media17);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Você foi REPROVADO! Sua média é de " + media17);
+                    }
+                    Console.ReadKey();
+                    break;
+                case 18:
+                    Console.WriteLine("***Atividade 18***");
+                    Console.Write("Entre com o primeiro valor: ");
+                    int a18 = int.Parse(Console.ReadLine());
+                    Console.Write("Entre com o segundo valor: ");
+                    int b18 = int.Parse(Console.ReadLine());
+                    if (a18 > b18)
+                    {
+                        int diferenca18 = (a18 - b18);
+                        Console.WriteLine("A diferença entre as valores é de " + diferenca18);
+                    }
+                    else
+                    {
+                        int diferenca18 = (b18 - a18);
+                        Console.WriteLine("A diferença entre as valores é de " + diferenca18);
+                    }
+                    Console.ReadKey();
+                    break;
+                case 19:
+                    Console.WriteLine("***Atividade 19***");
+                    for (int n19 = 1; n19 <= 10; n19++)
+                    {
+                        Console.WriteLine(n19);
+                    }
+                    Console.ReadKey();
+                    break;
+                case 20:
+                    Console.WriteLine("***Atividade 20***");
+                    for (int a20 = 100; a20 > 0; a20--)
+                    {
+                        Console.WriteLine(a20);
+                    }
+                    Console.ReadKey();
+                    break;
+                default:
+                    Console.WriteLine("Exercício não existe");
+                    break;
+
+
+
+
+            }
+        }
+    }
+}
